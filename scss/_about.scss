@@ -1,0 +1,39 @@
+
+.about {
+    padding: 107px 0 160px;
+}
+.about__inner {
+    min-height: 550px;
+    background-image: url(../img/about.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+}
+
+.about__content {
+    @include flex(column);
+
+    &-title {
+        @include font-style(24px, $ff-RubikBold, 700, $color-red, uppercase);
+        margin-top: 76px;
+    }
+    &-text {
+        @include font-style(18px, $ff-RubikLight, 300, $color-black);
+        line-height: 40px;
+        max-width: 470px;
+        margin-top: 42px;
+    }
+    &-note {
+        @include font-style(24px, $ff-RubikMedium, 500, $color-black);
+        max-width: 570px;
+        padding: 30px 55px;
+        line-height: 36px;
+        background: $color-bg-red;
+        border-left: 10px solid $color-red;
+        border-radius: 5px 0 0 5px;
+        margin-top: 78px;
+    }
+}
+
+
+
+

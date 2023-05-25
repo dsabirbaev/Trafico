@@ -1,0 +1,17 @@
+
+@mixin font-style($f-size, $f-family, $f-weight, $color, $transform:none) {
+    font-size: $f-size;
+    font-family: $f-family, sans-serif;
+    font-weight: $f-weight;
+    color: $color;
+    text-transform: $transform;
+}
+
+@mixin flex($f-direction:row, $f-content:flex-start, $a-items:stretch, $gap:0px) {
+    display: flex;
+    flex-direction: $f-direction;
+    justify-content: $f-content;
+    align-items: $a-items;
+    gap: $gap;
+}
+

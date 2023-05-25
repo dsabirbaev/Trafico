@@ -1,0 +1,181 @@
+.faq {
+    padding: 194px 0 177px;
+    background-image:  url(../img/faq-person.svg), url(../img/faq-bg.png);
+    background-repeat: no-repeat;
+    // background-position: 92% 22%, 180% 52%;
+    background-position: 590px 300px, 305px 195px;
+    background-color: $color-bg-red-white;
+}
+
+.faq__inner {
+    padding: 224px 0 145px;
+}
+.faq__title {
+    @include font-style(24px, $ff-RubikBold, 700, $color-red, uppercase);
+}
+.faq__subtitle {
+    @include font-style(48px, $ff-DMSerifDisplayRegular, 400, $color-black);
+    max-width: 550px;
+    line-height: 140%;
+    margin-top: 44px;
+}
+
+.faq__content {
+    margin-top: 170px;
+    @include flex(row, flex-start, flex-start, 20px);    
+}
+.faq-left {
+    @include flex(column, flex-start, stretch, 10px);
+    &__item {
+        max-width: 550px;
+        min-height: 90px;
+        @include flex(column);
+    }    
+    &__label {
+        @include font-style(18px, $ff-RubikMedium, 500, $color-black);
+        line-height: 30px;
+        cursor: pointer;
+        background-color: $color-white;
+        padding-left: 35px;
+        padding-right: 115px;
+        border-radius: 10px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: $color-red;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            transform: rotate(90deg);
+        }
+        &::after {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: $color-red;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+    }
+   
+    &__text {
+        @include font-style(18px, $ff-RubikLight, 300, $color-black);
+        background-color: $color-bg-red-white;
+        overflow: hidden;
+        transition: all 0.5s;
+        height: 0;
+        padding: 0px 35px;
+    }
+}
+
+.faq-left__input:checked+.faq-left__label::before {
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+
+.faq-left__input:not(checked)+.faq-left__label::before {
+    transition: all 0.5s;
+}
+
+
+.faq-left__input:checked~.faq-left__text {
+    height: auto;
+    padding: 40px 35px 60px;
+}
+
+
+.faq-right {
+    @include flex(column, flex-start, stretch, 10px);
+    &__item {
+        max-width: 550px;
+        min-height: 90px;
+        @include flex(column);
+    }    
+    &__label {
+        @include font-style(18px, $ff-RubikMedium, 500, $color-black);
+        line-height: 30px;
+        cursor: pointer;
+        background-color: $color-white;
+        padding-left: 35px;
+        padding-right: 115px;
+        border-radius: 10px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: $color-red;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            transform: rotate(90deg);
+        }
+        &::after {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: $color-red;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+    }
+   
+    &__text {
+        @include font-style(18px, $ff-RubikLight, 300, $color-black);
+        background-color: $color-bg-red-white;
+        overflow: hidden;
+        transition: all 0.5s;
+        height: 0;
+        padding: 0px 35px;
+    }
+}
+
+
+.faq-right__input:checked+.faq-right__label::before {
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+
+.faq-right__input:not(checked)+.faq-right__label::before {
+    transition: all 0.5s;
+}
+
+
+.faq-right__input:checked~.faq-right__text {
+    height: auto;
+    padding: 40px 35px 60px;
+}
+
+
+input[type=checkbox] {
+    display: none;
+}
+.p-15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.p-25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.p-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: $color-red;
+    background-color: $color-bg-red;
+}
+
+
+

@@ -1,0 +1,146 @@
+.footer {
+    padding: 160px 0 50px;
+    background-image: url(../img/footer-line.png), url(../img/footer-car.png), url(../img/footer-bg.png);
+    background-repeat: no-repeat;
+    background-position: -110px 235px, 0px 80px, -100px 260px;
+}
+
+
+.footer__inner {
+    @include flex(column);
+    gap: 170px;
+}
+
+.footer-top {
+    display: flex;
+    gap: 100px;
+    &__text {
+        @include font-style(20px, $ff-RubikRegular, 400, $color-white);
+        line-height: 30px;
+        max-width: 410px;
+        border-left: 10px solid $color-red;
+        border-radius: 5px 0 0 5px;
+        padding: 40px;
+        margin-top: 160px;
+        align-self: flex-start
+    }
+    .form {
+        @include flex(column, flex-start, stretch, 30px);
+        padding: 52px 75px;
+        background-color: $color-white;
+        .login, .email {
+            display: flex;
+            flex-direction: column;
+        } 
+
+        .login__label, .email__label {
+            @include font-style(16px, $ff-RubikLight, 300, $color-black);
+            line-height: 40px;
+        }
+
+        .login__input, .email__input {
+            @include font-style(18px, $ff-RubikLight, 300, $color-black);
+            line-height: 40px;
+            border: 1px solid $color-bg-red;
+            border-radius: 10px;
+            min-width: 400px;
+            padding: 11px 40px;
+
+            &:focus {
+                border-color: $color-red;
+                box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.2);
+            }
+        }
+        .button {
+            @include font-style(16px, $ff-RubikBold, 700, $color-white, uppercase);
+            background-color: $color-red;
+            padding-left: 25px;
+            text-align: left;
+            min-width: 220px;
+            min-height: 60px;
+            align-self: flex-start;
+            border-radius: 5px;
+            position: relative;
+            &::after {
+                content: "\f178";
+                font-family: 'icomoon';
+                font-size: 25px;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+
+.footer-middle {
+    @include flex(row, space-between, center);
+    position: relative;
+    .footer-logo {
+        margin-left: 60px;
+        
+        span:nth-child(1) {
+            position: absolute;
+            left: 0;
+            bottom: 100%;
+        }
+        span:nth-child(2) {
+            position: absolute;
+            left: 1.5%;
+            top: 5%;
+        }
+        &__link {
+            @include font-style(30px, $ff-DMSerifDisplayRegular, 400, $color-white, uppercase);
+        }
+    }
+
+    .footer-menu {
+        margin-right: 50px;
+        min-width: 368px;
+        &__items {
+            @include flex(row, space-between, center);
+        }
+        &__link {
+            @include font-style(16px, $ff-RubikBold, 700, $color-white, uppercase);
+        }
+        &__item:nth-child(4) {
+            background-color: $color-red;
+            padding: 21px 24px 20px;
+        }
+    }
+}
+
+.footer-bottom {
+    @include flex(row, space-between, center);
+
+    .footer-auth {
+        @include font-style(16px, $ff-RubikLight, 300, $color-black);
+    }
+    .footer-social {
+        min-width: 170px;
+        margin-right: 50px;
+        &__items {
+            @include flex(row, space-between, center);
+        }
+        &__item {
+            background-color: $color-red;
+            border-radius: 50%;
+            height: 36px;
+            width: 36px;
+            position: relative;
+        }
+        span {
+            font-size: 20px;
+            color: $color-white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+}
+
+

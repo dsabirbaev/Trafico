@@ -1,0 +1,92 @@
+
+
+.clients {
+    padding-bottom: 20px;
+    background-color: $color-bg-red-white;
+}
+
+.clients__inner {
+    @include flex(row, flex-start, stretch, 20px);
+}
+
+.clients__header {
+    @include flex(column, flex-start, stretch, 44px);
+    &-title {
+        @include font-style(24px, $ff-RubikBold, 700, $color-red, uppercase);
+        line-height: 40px;
+    }
+    &-subtitle {
+        @include font-style(48px, $ff-DMSerifDisplayRegular, 400, $color-black, capitalize);
+        line-height: 67px;
+    }
+}
+
+.clients__slider {
+    margin-top: 94px;
+    // @include flex(row, flex-start, stretch, 20px);
+    width: 70%;
+    position: relative;
+    &-item {
+        padding: 60px 52px 50px 48px;
+        background-color: $color-white;
+        box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+        border-radius: 10px;
+    }
+    &-text {
+        @include font-style(16px, $ff-RubikLight, 300, $color-black);
+        line-height: 30px;
+        max-width: 320px;
+        margin-bottom: 60px;
+    }
+    &-person {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &-name {
+        @include font-style(16px, $ff-RobotoBold, 700, $color-black);
+        line-height: 30px;
+    }
+}
+
+
+
+// settings for slick slider
+
+.slick-arrow{
+	position: absolute;
+	top: -15%;
+	font-size: 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: $color-red;
+}
+
+.slick-prev{
+	left: 70%;
+    &::before {
+        content: "\f177";
+        font-family: 'icomoon';
+        font-size: 30px;
+    }
+}
+
+.slick-next{
+	right: 20%;
+    &::after {
+        content: "\f178";
+        font-family: 'icomoon';
+        font-size: 30px;
+    }
+}
+
+.slick-disabled{
+    color: $color-bg-red;
+}
+
+.clients__slider .slick-slide {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+

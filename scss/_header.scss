@@ -1,0 +1,97 @@
+
+
+.header {
+    min-height: 954px;
+    margin-bottom: 224px;
+    background-repeat: no-repeat;
+    background-image:  url(../img/scene.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &__car {
+        min-width: 600px;
+        min-height: 395px;
+        background-image: url(../img/mobel.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 84%;
+        left: 0;
+    }
+}
+
+.header__inner {
+    @include flex(column, flex-start, stretch, 94px);
+}
+
+.header__top {
+   @include flex(row, space-between);
+   padding-top: 40px;
+   position: relative;
+   .logo {
+        align-self: flex-end;
+        margin-left: 59px;
+        span:nth-child(1) {
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+        span:nth-child(2) {
+            position: absolute;
+            left: 1.5%;
+            bottom: 0;
+        }
+        &__link {
+            @include font-style(32px, $ff-DMSerifDisplayRegular, 400, $color-white, uppercase);
+            padding-left: 20px;
+        }
+    }
+   .menu {
+    min-width: 609px;
+
+        &__items {
+            @include flex(row, space-between, center, 0px);
+        }
+        &__link {
+            @include font-style(16px, $ff-RubikBold, 700, $color-white, uppercase);
+        }
+        &__item:nth-child(4) {
+            background-color: $color-red;
+            padding: 21px 24px 20px;
+        }
+   }
+  
+}
+
+.header__content {
+    @include flex(column, flex-start, stretch, 60px);
+    &-title {
+        @include font-style(100px, $ff-DMSerifDisplayRegular, 400, $color-white);
+        max-width: 741px;
+    }
+    &-btn {
+        @include font-style(16px, $ff-RubikBold, 700, $color-white, uppercase);
+        background-color: $color-red;
+        padding-left: 25px;
+        text-align: left;
+        min-width: 220px;
+        min-height: 60px;
+        align-self: flex-start;
+        position: relative;
+        &::after {
+            content: "\f178";
+            font-family: 'icomoon';
+            font-size: 25px;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+
+
+
+
+

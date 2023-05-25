@@ -1,0 +1,19 @@
+@import 'variables',
+        'mixins',
+        'fonts';
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    // border: 1px solid blue;
+}
+
+@import 'header';   
+@import 'about';  
+@import 'apply';  
+@import 'faq';   
+@import 'clients';  
+@import 'footer';  
+
+             
+        

@@ -1,0 +1,23 @@
+
+.apply__inner {
+    min-height: 679px;
+    background-image: url(../img/apply.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    @include flex(row, flex-end, stretch);
+}
+
+.apply__content {
+    margin-top: 101px;
+    @include flex(column, flex-start, stretch, 40px);
+
+    &-title {
+        @include font-style(24px, $ff-RubikBold, 700, $color-red, uppercase);
+    }
+
+    &-text {
+        @include font-style(18px, $ff-RubikLight, 300, $color-black);
+        line-height: 40px;
+        max-width: 455px;
+    }
+}
